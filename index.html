@@ -5,22 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Andrea's Homepage by Nodo</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css" />
+    <link rel="stylesheet" href="stylesheets/friend.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <style type="text/css">
-      #canvas-friend {
-        position: fixed;
-        bottom: 1px;
-        right: 1px;
-      }
-    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -77,47 +70,10 @@
         </ul>
       </section>
 
-      <canvas id="canvas-friend" width="135" height="89"></canvas>
+      <span id="friend"></span>
 
     </div>
     <script src="javascripts/scale.fix.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready( function () {
-
-          var assets = ['images/penguin_crop_1.jpg',
-                        'images/penguin_crop_2.jpg']
-          var frames = []
-
-          var canvas = document.getElementById("canvas-friend");
-          var context = canvas.getContext("2d");
-
-          for (var i=0; i<assets.length; i++) {
-              frames[i] = new Image();
-              frames[i].src = assets[i];
-          }
-          var j = 0;
-          var k = 0;
-
-          var animate = function() {
-              if (k > 10) {
-                  console.log("hi");
-                  return;
-              }
-
-              context.clearRect(0,0,canvas.width, canvas.height);
-              context.drawImage(frames[j], 0, 0, 135, 89);
-
-              k += 1;
-              j += 1;
-              j = (j % frames.length);
-          };
-
-          setInterval(animate, 200);
-
-      });
-    </script>
-
 
   </body>
 </html>

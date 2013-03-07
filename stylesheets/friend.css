@@ -1,0 +1,52 @@
+@-webkit-keyframes sayHelloooooo {
+  0% {
+    background-image: url(../images/penguin_crop_1.jpg);
+  }
+  100% {
+    background-image: url(../images/penguin_crop_2.jpg);
+  }
+}
+
+@-moz-keyframes sayHelloooooo {
+  0% {
+    background-image: url(../images/penguin_crop_1.jpg);
+  }
+  100% {
+    background-image: url(../images/penguin_crop_2.jpg);
+  }
+}
+
+@-o-keyframes sayHelloooooo {
+  0% {
+    background-image: url(../images/penguin_crop_1.jpg);
+  }
+  100% {
+    background-image: url(../images/penguin_crop_2.jpg);
+  }
+}
+
+@keyframes sayHelloooooo {
+  0% {
+    background-image: url(../images/penguin_crop_1.jpg);
+  }
+  100% {
+    background-image: url(../images/penguin_crop_2.jpg);
+  }
+}
+
+#friend {
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  display: block;
+  width: 135px;
+  height: 89px;
+  background-image: url(../images/penguin_crop_1.jpg);
+  background-size: 135px 89px;
+  background-repeat: no-repeat;
+
+  -webkit-animation: sayHelloooooo .3s 10; /* Safari 4+ */
+  -moz-animation: sayHelloooooo .3s 10; /* Fx 5+ */
+  -o-animation: sayHelloooooo .3s 10; /* Opera 12+ */
+  animation: sayHelloooooo .3s 10; /* IE 10+ */
+}
